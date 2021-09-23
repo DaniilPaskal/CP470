@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Assignment 1</string>
+    <string name="app_name">задание 1</string>
     <string name="hello_message">Здравствуй, мир!</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="ButtonText">я кнопка</string>
+    <string name="LoginText">логин</string>
+    <string name="LoginNameText">имя для логина</string>
+    <string name="PasswordText">пароль</string>
+    <string name="SwitchText">что это делает?</string>
 </resources>

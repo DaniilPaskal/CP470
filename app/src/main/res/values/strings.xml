@@ -2,4 +2,8 @@
     <string name="app_name">Assignment 1</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="LoginText">Login</string>
+    <string name="LoginNameText">login name</string>
+    <string name="PasswordText">Password</string>
+    <string name="SwitchText">What does this do?</string>
 </resources>
