@@ -13,6 +13,7 @@
         android:text="@string/LoginText" />
 
     <EditText
+        android:id="@+id/loginField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/LoginNameText"
@@ -24,7 +25,15 @@
         android:text="@string/PasswordText" />
 
     <EditText
+        android:id="@+id/passwordField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LoginText" />
+
 </LinearLayout>
