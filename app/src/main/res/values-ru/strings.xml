@@ -7,4 +7,12 @@
     <string name="LoginNameText">имя для логина</string>
     <string name="PasswordText">пароль</string>
     <string name="SwitchText">что это делает?</string>
+    <string name="toastTrue">выключатель включен</string>
+    <string name="toastFalse">выключатель выключен</string>
+    <string name="dialogMessage">Вы хотите принять фотографию и вернуться?</string>
+    <string name="dialogTitle">закончить деятельность</string>
+    <string name="checkboxOk">да</string>
+    <string name="checkboxCancel">нет</string>
+    <string name="checkboxResponse">вот мой ответ</string>
+    <string name="passMessage">ListItemsActivity передал:\ </string>
 </resources>

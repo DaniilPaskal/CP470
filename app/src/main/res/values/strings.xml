@@ -6,4 +6,12 @@
     <string name="LoginNameText">login name</string>
     <string name="PasswordText">Password</string>
     <string name="SwitchText">What does this do?</string>
+    <string name="toastTrue">Switch is on</string>
+    <string name="toastFalse">Switch is off</string>
+    <string name="dialogMessage">Would you like to accept the photo and go back?</string>
+    <string name="dialogTitle">Finish Activity</string>
+    <string name="checkboxOk">Yes</string>
+    <string name="checkboxCancel">No</string>
+    <string name="checkboxResponse">my information to share</string>
+    <string name="passMessage">ListItemsActivity passed:\ </string>
 </resources>
