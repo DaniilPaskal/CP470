@@ -14,4 +14,6 @@
     <string name="checkboxCancel">No</string>
     <string name="checkboxResponse">my information to share</string>
     <string name="passMessage">ListItemsActivity passed:\ </string>
+    <string name="chatButtonText">Start chat</string>
+    <string name="sendButtonText">Send</string>
 </resources>
