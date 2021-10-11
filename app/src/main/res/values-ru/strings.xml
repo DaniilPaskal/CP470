@@ -15,4 +15,6 @@
     <string name="checkboxCancel">нет</string>
     <string name="checkboxResponse">вот мой ответ</string>
     <string name="passMessage">ListItemsActivity передал:\ </string>
+    <string name="chatButtonText">Начать Чат</string>
+    <string name="sendButtonText">Отправить</string>
 </resources>

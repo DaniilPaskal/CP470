@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         Button mainButton = findViewById(R.id.mainButton);
+        Button chatButton = findViewById(R.id.chatButton);
 
         // When mainButton is clicked, go to ListItemsActivity
         mainButton.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 10);
+            }
+        });
+
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivity(intent);
             }
         });
     }
