@@ -17,4 +17,16 @@
     <string name="passMessage">ListItemsActivity передал:\ </string>
     <string name="chatButtonText">Начать Чат</string>
     <string name="sendButtonText">Отправить</string>
+    <string name="choice1Text">выбор одинe</string>
+    <string name="choice2Text">выбор два</string>
+    <string name="choice3Text">выбор третий</string>
+    <string name="toolbarButtonText">панель инструментов тестирования</string>
+    <string name="aboutText">относительно</string>
+    <string name="toolbarToastText">версия 1.0, автор: Daniil Paskal</string>
+    <string name="toolbarSnackText">Это текст тоста по умолчанию</string>
+    <string name="item1SnackText">вы выбрали пункт 1</string>
+    <string name="dialogTitleText">вы хотите вернуться?</string>
+    <string name="dialogYesText">да</string>
+    <string name="dialogNoText">нет</string>
+    <string name="newMessageText">новое сообщение</string>
 </resources>

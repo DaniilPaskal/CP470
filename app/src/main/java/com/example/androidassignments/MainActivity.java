@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button mainButton = findViewById(R.id.mainButton);
         Button chatButton = findViewById(R.id.chatButton);
+        Button toolbarButton = findViewById(R.id.toolbarButton);
 
         // When mainButton is clicked, go to ListItemsActivity
         mainButton.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivity(intent);
+            }
+        });
+
+        toolbarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TestToolbar.class);
                 startActivity(intent);
             }
         });

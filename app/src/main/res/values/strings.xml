@@ -16,4 +16,16 @@
     <string name="passMessage">ListItemsActivity passed:\ </string>
     <string name="chatButtonText">Start chat</string>
     <string name="sendButtonText">Send</string>
+    <string name="choice1Text">Choice One</string>
+    <string name="choice2Text">Choice Two</string>
+    <string name="choice3Text">Choice Three</string>
+    <string name="toolbarButtonText">Test Toolbar</string>
+    <string name="aboutText">About</string>
+    <string name="toolbarToastText">Version 1.0, by Daniil Paskal</string>
+    <string name="toolbarSnackText">This is the default snackbar text</string>
+    <string name="item1SnackText">You selected item 1</string>
+    <string name="dialogTitleText">Do you want to go back?</string>
+    <string name="dialogYesText">Yes</string>
+    <string name="dialogNoText">No</string>
+    <string name="newMessageText">New Message</string>
 </resources>
