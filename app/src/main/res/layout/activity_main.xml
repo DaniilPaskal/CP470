@@ -35,17 +35,29 @@
 
     <Button
         android:id="@+id/chatButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="138dp"
+        android:layout_height="45dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="545dp"
         android:text="@string/chatButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.897" />
+
+    <Button
+        android:id="@+id/toolbarButton"
+        android:layout_width="136dp"
+        android:layout_height="61dp"
+        android:text="@string/toolbarButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.273" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

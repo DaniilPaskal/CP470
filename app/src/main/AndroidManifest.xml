@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidassignments">
 
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,15 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments">
         <activity
+            android:name=".TestToolbar"
+            android:exported="true"
+            android:theme="@style/Theme.AndroidAssignments.NoActionBar" />
+        <activity
             android:name=".ChatWindow"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ListItemsActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"></activity>
-
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -32,12 +34,11 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
-
     </application>
 
 </manifest>
