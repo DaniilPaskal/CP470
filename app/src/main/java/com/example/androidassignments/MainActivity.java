@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button mainButton = findViewById(R.id.mainButton);
         Button chatButton = findViewById(R.id.chatButton);
         Button toolbarButton = findViewById(R.id.toolbarButton);
+        Button forecastButton = findViewById(R.id.forecastButton);
 
         // When mainButton is clicked, go to ListItemsActivity
         mainButton.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        forecastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void onResume() {
@@ -89,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        setResult(Activity.RESULT_CANCELED);
+        finish();
     }
 
 }
