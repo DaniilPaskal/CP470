@@ -28,4 +28,5 @@
     <string name="dialogYesText">Yes</string>
     <string name="dialogNoText">No</string>
     <string name="newMessageText">New Message</string>
+    <string name="forecastText">Weather Forecast</string>
 </resources>

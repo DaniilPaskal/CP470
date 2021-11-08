@@ -29,4 +29,5 @@
     <string name="dialogYesText">да</string>
     <string name="dialogNoText">нет</string>
     <string name="newMessageText">новое сообщение</string>
+    <string name="forecastText">Прогноз погоды</string>
 </resources>

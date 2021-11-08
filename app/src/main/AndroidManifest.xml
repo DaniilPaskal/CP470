@@ -3,6 +3,7 @@
     package="com.example.androidassignments">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments">
+        <activity
+            android:name=".WeatherForecast"
+            android:exported="true" />
         <activity
             android:name=".TestToolbar"
             android:exported="true"
