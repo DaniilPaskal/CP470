@@ -1,10 +1,13 @@
 package com.example.androidassignments;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -30,6 +33,9 @@ public class ChatWindow extends AppCompatActivity {
     Button sendButton;
     ArrayList<String> chatMessages;
     SQLiteDatabase db;
+    Boolean tabletCheck;
+    Cursor cursor;
+    Bundle fragmentBundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,12 @@ public class ChatWindow extends AppCompatActivity {
         chatMessages = new ArrayList<String>();
         chatMessages.clear();
 
+        if (findViewById(R.id.chatFrame) != null) {
+            tabletCheck = true;
+        } else {
+            tabletCheck = false;
+        }
+
         final ChatAdapter messageAdapter = new ChatAdapter( this );
         chatList.setAdapter (messageAdapter);
 
@@ -51,7 +63,7 @@ public class ChatWindow extends AppCompatActivity {
         db = databaseHelper.getWritableDatabase();
 
         // Query existing messages
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ChatDatabaseHelper.TABLE_NAME, null);
+        cursor = db.rawQuery("SELECT * FROM " + ChatDatabaseHelper.TABLE_NAME, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
             chatMessages.add(cursor.getString(cursor.getColumnIndexOrThrow(ChatDatabaseHelper.KEY_MESSAGE)));
@@ -78,6 +90,28 @@ public class ChatWindow extends AppCompatActivity {
                 ContentValues values = new ContentValues();
                 values.put(ChatDatabaseHelper.KEY_MESSAGE, currentMessage);
                 db.insert(ChatDatabaseHelper.TABLE_NAME, null, values);
+            }
+        });
+
+        chatList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentBundle.putLong("id", messageAdapter.getItemId(cursor.getPosition()));
+                fragmentBundle.putString("message", messageAdapter.getItem(cursor.getPosition()));
+
+                if (tabletCheck == true) {
+                    MessageDetails.MessageFragment fragment = new MessageDetails.MessageFragment();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    fragment.setArguments(fragmentBundle);
+                    ft.addToBackStack(null);
+                    ft.add(R.id.fragmentFrame, fragment);
+                    ft.commit();
+
+                } else {
+                    Intent intent = new Intent(ChatWindow.this, MessageDetails.class);
+                    intent.putExtras(fragmentBundle);
+                    startActivityForResult(intent, 10);
+                }
             }
         });
     }
@@ -110,6 +144,11 @@ public class ChatWindow extends AppCompatActivity {
             message.setText(getItem(position)); // get the string at position
             return result;
         }
+
+        public long getItemId(int position) {
+            cursor.moveToPosition(position);
+            return Long.parseLong(cursor.getString(cursor.getColumnIndexOrThrow(ChatDatabaseHelper.KEY_ID)));
+        }
     }
 
     public void onDestroy() {
@@ -123,5 +162,14 @@ public class ChatWindow extends AppCompatActivity {
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == fragmentBundle.getInt("id", 0)) {
+            db.rawQuery("DELETE FROM " + ChatDatabaseHelper.TABLE_NAME + " WHERE " + ChatDatabaseHelper.KEY_ID + " = " + resultCode, null);
+        }
+    }
+
 
 }
