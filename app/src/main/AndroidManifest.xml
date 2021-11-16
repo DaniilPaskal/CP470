@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments">
         <activity
+            android:name=".MessageDetails"
+            android:exported="true" />
+        <activity
             android:name=".WeatherForecast"
             android:exported="true" />
         <activity
